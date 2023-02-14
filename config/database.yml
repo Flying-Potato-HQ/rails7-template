@@ -1,0 +1,29 @@
+test:
+  host: psql
+  pool: 5
+  adapter:  postgresql
+  encoding: unicode
+
+  database: rails7app_test
+  username: postgres
+  password: qwerty
+
+development:
+  host: psql
+  pool: 5
+  adapter:  postgresql
+  encoding: unicode
+
+  database: rails7app
+  username: postgres
+  password: qwerty
+
+production:
+  host: psql
+  pool: 5
+  adapter:  postgresql
+  encoding: unicode
+
+  database: rails7app
+  username: postgres
+  password: qwerty

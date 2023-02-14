@@ -1,0 +1,41 @@
+<header>
+  <div style="text-align:center">
+    <h1 class="page-header">
+      <a href="https://github.com/the-teacher/rails7-startkit#rails-7-start-kit">
+        <img width="300px" src="/Rails7.StartKit.jpg" />
+      </a>
+    </h1>
+    <p>
+      <a href="https://github.com/the-teacher/rails7-startkit#rails-7-start-kit">Rails 7. StartKit.</a> Please tell your friends about this project.
+    </p>
+    <br>
+  </div>
+
+  <ul class="header-menu">
+    <li class="header-item">
+      <b>Root:</b>
+      <%= link_to "Demo Index", "/" %>
+    </li>
+
+    <li class="header-item">
+      <b>Mail Server:</b>
+      <%= link_to "localhost:1080", "http://localhost:1080", target: :_blank %>
+    </li>
+
+    <li class="header-item">
+      <b>ElasticSearch:</b>
+      <%= link_to "localhost:9200", "http://localhost:9200", target: :_blank %>
+    </li>
+
+    <li class="header-item">
+      <b>Devise:</b>
+      <% if user_signed_in? %>
+        <%= current_user.email %> |
+        <%= link_to "Sign Out", destroy_user_session_path%>
+      <% else %>
+        <%= link_to "Sign In", new_user_session_path %> |
+        <%= link_to "Sign Up", new_user_registration_path %>
+      <% end %>
+    </li>
+  </ul>
+</header>
